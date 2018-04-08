@@ -1,0 +1,124 @@
+@-ms-viewport{
+  width: device-width;
+}
+
+#home{
+    display: flex;
+    min-height: 100vh;
+    align-items: stretch;
+    justify-content: space-between;
+    
+}
+
+body{
+    background: #0000;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    }
+
+#about{
+    flex: 1;
+    background: #F7F2E6;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+        "."
+        "heading"
+        "sub-heading"
+        "."
+        "social-media";
+}
+
+#menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    flex: 1;
+    background: #1D4D66;
+    z-index: 0;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100vh;
+    height: 95vh;
+    z-index: -1;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-item{
+    font-family: EB Garamond;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 32px;
+    text-align: center;
+    color: #FFFCF9;
+    
+    transition: all .2s ease-in-out;
+}
+
+.nav-item:hover{
+    transform: scale(1.1);
+}
+
+#heading{  
+    font-family: EB Garamond;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 48px;
+    text-align: center;
+    color: #323642;
+}
+
+#header-container{
+    align-self: end;
+    grid-area: heading;
+}
+
+#sub-heading{
+    grid-area: sub-heading;
+    align-self: start;
+    
+    font-family: EB Garamond;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 24px;
+    text-align: center;
+    color: #4F4F4F;
+}
+
+.social-media{
+    grid-area: social-media;
+    align-self: end;
+}
+
+#instagram, #linkedin{
+    padding: 5px;
+    transition: all .2s ease-in-out;
+}
+
+#instagram:hover{
+    transform: scale(1.1);
+}
+
+#linkedin:hover{
+    transform: scale(1.1);
+}
