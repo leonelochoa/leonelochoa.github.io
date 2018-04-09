@@ -48,7 +48,7 @@ html, body {
     align-content: center;
     
     flex: 1;
-    background: #1D4D66;
+    background: #8C1919;
     z-index: 0;
 }
 
@@ -146,7 +146,7 @@ a{
     justify-content: center;
     align-items: center;
 
-    background-color: #1D4D66;
+    background-color: #8C1919;
 }
 
 #sebastian{
