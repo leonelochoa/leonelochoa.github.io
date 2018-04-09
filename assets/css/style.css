@@ -37,10 +37,15 @@ html, body {
     grid-template-rows: auto;
     grid-template-areas: 
         "."
+        "landing"
         "heading"
         "sub-heading"
-        "."
-        "social-media";
+        "social-media"
+        ".";
+
+    justify-items: center;
+    align-content: center;
+
 }
 
 #menu{
@@ -78,6 +83,9 @@ a{
     text-align: center;
     color: #FFFCF9;
     
+    margin: 10px;
+    padding: 5px;
+    
     transition: all .2s ease-in-out;
 }
 
@@ -86,6 +94,8 @@ a{
 }
 
 #heading{  
+    grid-area: heading;
+
     font-family: EB Garamond;
     font-style: normal;
     font-weight: normal;
@@ -93,16 +103,13 @@ a{
     font-size: 48px;
     text-align: center;
     color: #323642;
+
+    margin-bottom: 5px;
 }
 
-#header-container{
-    align-self: end;
-    grid-area: heading;
-}
 
 #sub-heading{
     grid-area: sub-heading;
-    align-self: start;
     
     font-family: EB Garamond;
     font-style: normal;
@@ -111,11 +118,15 @@ a{
     font-size: 24px;
     text-align: center;
     color: #4F4F4F;
+
+    margin-top: 5px;
+    
 }
 
 .social-media{
     grid-area: social-media;
     align-self: end;
+    
 }
 
 #instagram, #linkedin{
@@ -124,9 +135,27 @@ a{
 }
 
 #instagram:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 #linkedin:hover{
-    transform: scale(1.1);
+    transform: scale(1.2);
+}
+
+#landing-container{
+    grid-area: landing;
+    display: flex;
+
+    height: 165px;
+    width: 170px;
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: #1D4D66;
+}
+
+#sebastian{
+    height: 125px;
+    width: 130px;
 }
