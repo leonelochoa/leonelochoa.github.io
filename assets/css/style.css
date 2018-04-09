@@ -2,14 +2,7 @@
   width: device-width;
 }
 
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 667px) {
-    
-    home{
-        flex-direction: column;
-    }
-}
+
 #home{
     display: flex;
     min-height: 100vh;
@@ -52,6 +45,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+    align-content: center;
     
     flex: 1;
     background: #1D4D66;
@@ -158,4 +152,15 @@ a{
 #sebastian{
     height: 125px;
     width: 130px;
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    #menu{
+        background: #8C1919;
+    }
+
+    #home{
+        flex-direction: column;
+    }
 }
