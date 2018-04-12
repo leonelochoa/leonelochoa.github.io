@@ -2,51 +2,66 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/jquery.fullPage">
 	<link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
     <script type="text/jscript" src="assets/script/jquery-3.3.1.min.js"></script>
-    <script type="text/jscript" src="assets/script/typed.js"></script>
+    <script type="text/jscript" src="assets/script/typed.js"></script> 
     <script type="text/jscript" src="assets/script/script.js"></script>
+    <script type="text/jscript" src="assets/script/jquery.fullPage.js"></script>
     <title>Leonel Ochoa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </head>
 
-<body id="home">
-    <div id="about" class="container">
-    	<div id="landing-container">
-    		<img id="sebastian" src="./assets/img/sebastian.jpg">
-    	</div>
-        <h1 id="heading">Leonel A. Ochoa</h1>
-        <h2 id="sub-heading" class="typed">Researcher. Programmer. Innovator.</h2>
-        <script id="sub-heading" type="text/jscript">
-                    var typed = new Typed('.typed', {
-                    strings: ["Loading...", "Researcher. ^150 Programmer. ^150 Innovator."],
-                    typeSpeed: 85,
-                    smartBackspace: false,
-                    showCursor: false
-                    });
-            </script>
-        <div class="social-media">
-            <a href="https://www.instagram.com/8a.leo/">
-                <img id="instagram" src="assets/img/instagram.svg">
-            </a>
-            <a href="https://www.linkedin.com/in/leonel-ochoa">
-                <img id="linkedin" src="assets/img/linkedin.svg">
-            </a>
-        </div>
-    </div>
-    <div id="menu" class="container">
-        <div id="particles-js"></div>
-        <div id="navigation">
-            <ul>
-                <li class="nav-item"><a href="#home">Home</a></li>
-                <li class="nav-item"><a href="gallery.html">Gallery</a></li>
-                <li class="nav-item"><a href="projects.html">Projects</a></li>
-                <li class="nav-item"><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-    </div>
+<body >
 
+    <div id="wrapper">
+        <div id="home" class="section">
+            <div id="about" class="container">
+                <div id="landing-container">
+                    <img id="sebastian" src="./assets/img/sebastian.jpg">
+                </div>
+                <h1 id="heading">Leonel A. Ochoa</h1>
+                <h2 id="sub-heading" class="typed">Researcher. Programmer. Innovator.</h2>
+                <script id="sub-heading" type="text/jscript">
+                            var typed = new Typed('.typed', {
+                            strings: ["Loading...", "Researcher. ^150 Programmer. ^150 Innovator."],
+                            typeSpeed: 85,
+                            smartBackspace: false,
+                            showCursor: false
+                            });
+                    </script>
+                <div class="social-media">
+                    <a href="https://www.instagram.com/8a.leo/">
+                        <img id="instagram" src="assets/img/instagram.svg">
+                    </a>
+                    <a href="https://www.linkedin.com/in/leonel-ochoa">
+                        <img id="linkedin" src="assets/img/linkedin.svg">
+                    </a>
+                </div>
+            </div>
+            <div id="menu" class="container">
+                <div id="particles-js-home"></div>
+                <div id="navigation">
+                    <ul>
+                        <li class="nav-item"><a href="#home">Home</a></li>
+                        <li class="nav-item"><a href="#gallery">Gallery</a></li>
+                        <li class="nav-item"><a href="projects.html">Projects</a></li>
+                        <li class="nav-item"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="gallery" class="section">
+            <div id="album" class="container">
+                <div id="particles-js-gallery"></div>
+            </div>
+            <div id="photo" class="container"></div>
+        </div>
+
+    </div>
+    
 </body>
     
 <script type="text/jscript" src="assets/script/particles.js"></script>

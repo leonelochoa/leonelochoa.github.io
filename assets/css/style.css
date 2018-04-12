@@ -52,12 +52,13 @@ html, body {
     z-index: 0;
 }
 
-#particles-js {
+#particles-js-home, #particles-js-gallery{
     position: absolute;
     width: 100vh;
     height: 95vh;
     z-index: -1;
 }
+
 
 ul{
     list-style-type: none;
@@ -152,6 +153,26 @@ a{
 #sebastian{
     height: 125px;
     width: 130px;
+}
+
+#album{
+    flex: 1;
+    background: #8C1919;
+    z-index: 0;
+}
+
+#photo{
+    flex: 1;
+    background: #F7F2E6;
+}
+
+
+#gallery{
+    display: flex;
+    min-height: 100vh;
+    align-items: stretch;
+    justify-content: space-between;
+    
 }
 
 
