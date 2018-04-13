@@ -21,6 +21,8 @@ time, mark, audio, video {
     border: 0;
     font-size: 100%;
     font: inherit;
+    text-decoration: none;
+    color: inherit;
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -131,15 +133,6 @@ table {
 }
 
 
-ul{
-    list-style-type: none;
-}
-
-a{
-    text-decoration: none;
-    color: inherit;
-}
-
 .nav-item{
     font-family: EB Garamond;
     font-style: normal;
@@ -212,8 +205,16 @@ a{
 #gallery{
     display: flex;
     min-height: 100vh;
-    align-items: stretch;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
     
 }
 
+.wip{
+    font-family: EB Garamond;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 96px;
+    text-align: center;
+}
