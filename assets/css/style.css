@@ -1,3 +1,5 @@
+/* ---- CSS Reset ----- */
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -49,7 +51,8 @@ table {
     border-spacing: 0;
 }
 
-/* ---- CSS Reset ----- */
+/* --- Home --- */
+
 
 #home{
     display: flex;
@@ -60,7 +63,7 @@ table {
 
 #particles-js-home{
     flex: 1;
-    width: 100vh;
+    width: inherit;
     height: 100vh;
     z-index: 1;
     background: #202C39;
@@ -84,17 +87,14 @@ table {
         "heading"
         "sub-heading"
         ".";
-
 }
 
 #name{
-
     grid-area: heading;
     margin-bottom: 5px;
 }
 
 .heading{  
-
     font-family: EB Garamond;
     font-style: normal;
     font-weight: normal;
@@ -102,7 +102,6 @@ table {
     font-size: 96px;
     text-align: center;
     color: #FFFCF9;
-
 }
 
 
@@ -112,7 +111,6 @@ table {
 }
 
 .sub-heading{
-    
     font-family: EB Garamond;
     font-style: normal;
     font-weight: normal;
@@ -120,32 +118,163 @@ table {
     font-size: 36px;
     text-align: center;
     color: #FFFCF9;
+}
 
+/* --- About --- */
+
+#about{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
 }
 
 #particles-js-about{
     flex: 1;
-    width: 100vh;
+    width: inherit;
     height: 100vh;
     z-index: 1;
     background: #283845;
 
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#about-container{
+    flex: 1;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+
+    display: grid;
+    grid-template-rows: 52vh 48vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "left-about right-about"
+        "bottom-about bottom-about";
+}
+
+#left-about{
+    grid-area: left-about;
+
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 100px auto 100px;
+    grid-template-areas: 
+        "about-pre-heading about-pre-heading ."
+        ". about-heading about-heading";
+    align-items: center;
+
+    width: 100%;
+}
+
+#about-pre-heading{
+    grid-area: about-pre-heading;
+    align-self: center;
+}
+
+.pre-heading{
+    font-family: EB Garamond;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 24px;
+    text-align: center;
+    color: #FFFCF9;
+}
+
+#heading-frame{
+    grid-area: about-heading;
+    align-self: start;
+
+    width: 500px;
+    height: 115px;
+    background: #F29559;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+
+.section-heading{
+    font-family: EB Garamond;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 64px;
+    text-align: center;
+
+    color: #FFFCF9;
+}
+
+#right-about{
+    grid-area: right-about;
+
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.post-heading{
+    font-family: EB Garamond;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 48px;
+    text-align: center;
+
+    color: #FFFCF9;
+}
+
+#bottom-about{
+    grid-area: bottom-about;
+
+    display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.section-text{
+    font-family: EB Garamond;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 32px;
+    text-align: center;
+
+    color: #FFFCF9;
+}
+
+#about-text{
+    margin-top: 10px;
+    margin-right: 75px;
+    margin-left: 75px;
+}
+
+.bold{
+    font-size: 32px;
+}
+
+#leonel-ochoa{
+    font-size: 48px;
+}
+
+/* --- Gallery --- */
 
 #gallery{
     display: flex;
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    
 }
 
 #particles-js-gallery{
     flex: 1;
-    width: 100vh;
+    width: inherit;
     height: 100vh;
     z-index: 1;
     background: #B8B08D;
@@ -155,17 +284,18 @@ table {
     align-items: center;
 }
 
+/* --- Projects --- */
+
 #projects{
     display: flex;
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    
 }
 
 #particles-js-projects{
     flex: 1;
-    width: 100vh;
+    width: inherit;
     height: 100vh;
     z-index: 1;
     background: #F2D492;
@@ -175,17 +305,18 @@ table {
     align-items: center;
 }
 
+/* --- Contact --- */
+
 #contact{
     display: flex;
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    
 }
 
 #particles-js-contact{
     flex: 1;
-    width: 100vh;
+    width: inherit;
     height: 100vh;
     z-index: 1;
     background: #F29559;
@@ -215,22 +346,7 @@ table {
     transform: scale(1.2);
 }
 
-
-#about{
-    display: flex;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    
-}
-
-#gallery{
-    display: flex;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-    
-}
+/* --- Work-In-Progress --- */
 
 .wip{
     font-family: EB Garamond;
@@ -242,6 +358,8 @@ table {
     color: #FFFCF9;
 }
 
+
+/* --- Navigation --- */
 
 /*
 #menu{
