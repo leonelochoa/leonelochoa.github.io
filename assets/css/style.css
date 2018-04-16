@@ -58,12 +58,12 @@ table {
     justify-content: center;
 }
 
-#particles-js-home, #particles-js-gallery{
+#particles-js-home{
     flex: 1;
     width: 100vh;
     height: 100vh;
     z-index: 1;
-    background: #1D4D66;
+    background: #202C39;
 
     display: flex;
     justify-content: center;
@@ -87,8 +87,13 @@ table {
 
 }
 
-#heading{  
+#name{
+
     grid-area: heading;
+    margin-bottom: 5px;
+}
+
+.heading{  
 
     font-family: EB Garamond;
     font-style: normal;
@@ -98,17 +103,15 @@ table {
     text-align: center;
     color: #FFFCF9;
 
-    margin-bottom: 5px;
-    transition: all .2s ease-in-out;
-}
-
-#heading:hover{
-    transform: scale(1.1);
 }
 
 
-#sub-heading{
+#titles{
     grid-area: sub-heading;
+    margin-top: 5px; 
+}
+
+.sub-heading{
     
     font-family: EB Garamond;
     font-style: normal;
@@ -118,38 +121,78 @@ table {
     text-align: center;
     color: #FFFCF9;
 
-    margin-top: 5px;
 }
 
-#menu{
+#particles-js-about{
+    flex: 1;
+    width: 100vh;
+    height: 100vh;
+    z-index: 1;
+    background: #283845;
+
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gallery{
+    display: flex;
+    min-height: 100vh;
     align-items: center;
     justify-content: center;
-    align-content: center;
     
+}
+
+#particles-js-gallery{
     flex: 1;
-    background: #8C1919;
-    z-index: 0;
+    width: 100vh;
+    height: 100vh;
+    z-index: 1;
+    background: #B8B08D;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
-.nav-item{
-    font-family: EB Garamond;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 32px;
-    text-align: center;
-    color: #FFFCF9;
+#projects{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
     
-    margin: 10px;
-    padding: 5px;
-    
-    transition: all .2s ease-in-out;
 }
 
-.nav-item:hover{
-    transform: scale(1.1);
+#particles-js-projects{
+    flex: 1;
+    width: 100vh;
+    height: 100vh;
+    z-index: 1;
+    background: #F2D492;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#particles-js-contact{
+    flex: 1;
+    width: 100vh;
+    height: 100vh;
+    z-index: 1;
+    background: #F29559;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -172,35 +215,14 @@ table {
     transform: scale(1.2);
 }
 
-#landing-container{
-    grid-area: landing;
+
+#about{
     display: flex;
-
-    height: 165px;
-    width: 170px;
-
-    justify-content: center;
+    min-height: 100vh;
     align-items: center;
-
-    background-color: #8C1919;
+    justify-content: center;
+    
 }
-
-#sebastian{
-    height: 125px;
-    width: 130px;
-}
-
-#album{
-    flex: 1;
-    background: #8C1919;
-    z-index: 0;
-}
-
-#photo{
-    flex: 1;
-    background: #F7F2E6;
-}
-
 
 #gallery{
     display: flex;
@@ -217,4 +239,36 @@ table {
     line-height: normal;
     font-size: 96px;
     text-align: center;
+    color: #FFFCF9;
 }
+
+
+/*
+#menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    
+    flex: 1;
+    background: #8C1919;
+    z-index: 0;
+}
+.nav-item{
+    font-family: EB Garamond;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 32px;
+    text-align: center;
+    color: #FFFCF9;
+    
+    margin: 10px;
+    padding: 5px;
+    
+    transition: all .2s ease-in-out;
+}
+
+.nav-item:hover{
+    transform: scale(1.1);
+} */

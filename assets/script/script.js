@@ -3,9 +3,9 @@ $( document ).ready(function() {
 
    $("#wrapper").fullpage();
 
-   var typed = new Typed('.typed', {
-   	strings: ["Loading...", "Researcher.  ^175 Programmer.  ^175 Innovator.  "],
-    	typeSpeed: 85,
+   var typed = new Typed('#titles', {
+   	strings: ["Loading...", "Researcher.  ^150 Programmer.  ^150 Innovator.  "],
+    	typeSpeed: 45,
         smartBackspace: false,
         showCursor: false
     });
