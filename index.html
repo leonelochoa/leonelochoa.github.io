@@ -8,8 +8,9 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/jquery.fullPage.css">
     <script type="text/jscript" src="assets/script/jquery-3.3.1.min.js"></script>
     <script type="text/jscript" src="assets/script/typed.js"></script> 
-    <script type="text/jscript" src="assets/script/script.js"></script>
     <script type="text/jscript" src="assets/script/jquery.fullPage.js"></script>
+    <script type="text/jscript" src="assets/script/isotope.pkgd.min.js"></script>
+    <script type="text/jscript" src="assets/script/script.js"></script>
     <title>Leonel Ochoa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
@@ -19,17 +20,13 @@
 
     <div id="fullpage">
 
-        <!-- Nav -->
-
-        
-
         <!-- Home -->
 
         <div id="home" class="section">
             <div id="particles-js-home">
                 <div id="landing">
                     <h1 id="name" class="heading animated bounceInDown">Leonel A. Ochoa</h1>
-                    <h2 id="titles" class="sub-heading"></h2>
+                    <h2 id="titles" class="sub-heading">Researcher. Programmer. Innovator.</h2>
                 </div>
             </div>
         </div>
@@ -45,15 +42,15 @@
                     </div>
                     <div id="left-about">
                         <div class="image-container">
-                            <img id="me" class="animated rollIn" src="assets/img/me.jpg">
+                            <img id="me" class="isAnimatedMe" src="assets/img/me.jpg">
                         </div>
                     </div>
                     <div id="right-about">
                         <div id="about-text-container">
                             <div id="about-text">
-                                <h2 id="hey">Hey there,</h2>
-                                <h1 id="leo">I'm Leo</h1>
-                                <p >There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                                <h2 id="hey" class="isAnimatedHey">Hey there,</h2>
+                                <h1 id="leo" class="isAnimatedLeo">I'm Leo</h1>
+                                <p >Welcome to my website! Born 'n raised in the sunny San Antonio, Texas, life has thrown me all over the map - taking me from Florida all the way to California. Now student at UC Berkeley, I hope to make my difference in the world as a doctor. Go Bears!</p>
                             </div>
                         </div>
                     </div>
@@ -65,28 +62,58 @@
 
         <div id="gallery" class="section">
             <div id="particles-js-gallery">
-                <div id="landing">
-                    <div class="wip">Work In Progress</div>
+                <div id="gallery-container">
+                    <div id="gallery-heading-container">
+                        <h1 class="section-heading" id="gallery-heading">Gallery</h1>
+                    </div>
+                    <div id="overlay">
+                        <div id="gallery-text" class="isAnimatedGallery">
+                            <h1 >Here are some of my pictures</h1>
+                        </div>
+                            <div class="grid">
+                                <!-- <div class="grid-item"><img src="assets/img/little.jpg"></div>
+                                <div class="grid-item"><img src="assets/img/den1.jpg"></div>
+                                <div class="grid-item width2"><img src="assets/img/den2.jpg"></div>
+                                <div class="grid-item"><img src="assets/img/joshua.jpg"></div>
+                                <div class="grid-item"><img src="assets/img/sunset.jpg"></div>
+                                <div class="grid-item width2"><img src="assets/img/dino.jpg"></div>
+                                <div class="grid-item"><img src="assets/img/red.jpg"></div>
+                                <div class="grid-item"><img src="assets/img/ryan.jpg"></div>
+                                <div class="grid-item"><img src="assets/img/kobe1.jpg"></div>
+                                <div class="grid-item width2"><img src="assets/img/julion.jpg"></div>
+                                <div class="grid-item"><img src="assets/img/david.jpg"></div>
+                                <div class="grid-item"><img src="assets/img/mom.jpg"></div>
+                                <div class="grid-item width2"><img src="assets/img/abi.jpg"></div>
+                                <div class="grid-item"><img src="assets/img/church.jpg"></div>
+                                <div class="grid-item"><img src="assets/img/harold.jpg"></div>
+                                <div class="grid-item width2"><img src="assets/img/berkeley.jpg"></div>
+                                <div class="grid-item"><img src="assets/img/kobe2.jpg"></div> -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
 
         <!-- Projects -->
 
-        <div id="projects" class="section">
+       <!-- <div id="projects" class="section">
             <div id="particles-js-projects">
                 <div id="landing">
                     <div class="wip">Work In Progress</div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
          <!-- Contact -->
 
-        <div id="contact" class="section">
+        <div id="contact" class="section fp-auto-height-responsive">
             <div id="particles-js-contact">
-                <div id="landing">
-                    <div class="wip">Work In Progress</div>
+                <div id="contact-container">
+                    <h1 class="section-heading">Contact Me:</h1>
+                    <h2 class="sub-heading">Have a question? Let's talk.</h2>
+                    <div id="contact-form">
+                        
+                    </div>
                 </div>
             </div>
         </div>

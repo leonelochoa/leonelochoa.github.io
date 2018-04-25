@@ -57,6 +57,7 @@ table {
 /* --- Home --- */
 
 
+
 #home{
     display: flex;
     min-height: 100vh;
@@ -125,8 +126,6 @@ table {
 
 /* --- About --- */
 
-.slide{
-}
 
 #about{
     display: flex;
@@ -168,13 +167,13 @@ table {
     grid-area: heading;
     align-self: flex-end;
 
-    margin-bottom: 1%;
+    margin-bottom: 1.5%;
 
-    width: 65vh;
+    width: 145vh;
     height: 15vh;
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -218,7 +217,7 @@ table {
     font-style: normal;
     font-weight: normal;
     line-height: normal;
-    font-size: 18px;
+    font-size: 24px;
 
     color: #FFFCF9
 }
@@ -231,7 +230,7 @@ table {
     line-height: normal;
     font-size: 36px;
 
-    color: #F2D492;
+    color: #F3D79B;
 
     margin-left: 30px;
 }
@@ -262,10 +261,10 @@ table {
 #left-about .image-container{
 
     margin-left: 200px;
-    margin-top: -75px;
+    margin-top: -60px;
 
     width: 70vh;
-    height: 45vh;
+    height: 50vh;
     background: #F2D492;
 
     display: flex;
@@ -275,11 +274,12 @@ table {
 
 
 #me{
-
     position: absolute;
     height: inherit;
     width: inherit;
 }
+
+
 
 
 /* --- Gallery --- */
@@ -302,6 +302,75 @@ table {
     justify-content: center;
     align-items: center;
 }
+
+#gallery-container{
+    flex: 1;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+
+    display: grid;
+    grid-template-rows: 30vh 70vh;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "heading"
+        "gallery"
+
+    justify-items: center;
+}
+
+#gallery-heading-container{
+
+    display: flex;
+    align-content: flex-end;
+    justify-content: center;
+
+    margin-top: 5%;
+}
+
+#overlay{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 30px;
+    background: #F2D492;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+    -webkit-box-shadow: 0px 3px 10px 0px rgba(50,54,66,1);
+    -moz-box-shadow: 0px 3px 10px 0px rgba(50,54,66,1);
+    box-shadow: 0px 3px 10px 0px rgba(50,54,66,1);
+}
+
+#gallery-text{
+    background: #F29559;
+    margin-right: 200px;
+    margin-left: 200px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#overlay h1{
+
+    font-family: EB Garamond;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 48px;
+    text-align: center;
+
+    color: #FFFCF9;
+}
+
+
 
 /* --- Projects --- */
 
@@ -328,7 +397,7 @@ table {
 
 #contact{
     display: flex;
-    min-height: 100vh;
+    max-height: 75vh;
     align-items: center;
     justify-content: center;
 }
@@ -345,24 +414,34 @@ table {
     align-items: center;
 }
 
+#contact-container{
+    flex: 1;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
 
-.social-media{
-    grid-area: social-media;
-    align-self: end;
-    
+    display: grid;
+    grid-template-rows: 30vh 10vh 60vh;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "heading"
+        "sub-heading"
+        "contact";
+    justify-content: flex-start;
 }
 
-#instagram, #linkedin{
-    padding: 5px;
-    transition: all .2s ease-in-out;
+#contact-container h1{
+    align-self: flex-end;
+    text-align: left;
+    margin-left: 100px;
+
 }
 
-#instagram:hover{
-    transform: scale(1.2);
-}
-
-#linkedin:hover{
-    transform: scale(1.2);
+#contact-container h2{
+    align-self: flex-start;
+    text-align: left;
+    margin-left: 100px;
 }
 
 /* --- Work-In-Progress --- */
@@ -376,36 +455,3 @@ table {
     text-align: center;
     color: #FFFCF9;
 }
-
-
-/* --- Navigation --- */
-
-/*
-#menu{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    
-    flex: 1;
-    background: #8C1919;
-    z-index: 0;
-}
-.nav-item{
-    font-family: EB Garamond;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 32px;
-    text-align: center;
-    color: #FFFCF9;
-    
-    margin: 10px;
-    padding: 5px;
-    
-    transition: all .2s ease-in-out;
-}
-
-.nav-item:hover{
-    transform: scale(1.1);
-} */
