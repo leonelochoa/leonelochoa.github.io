@@ -4,14 +4,17 @@ $( document ).ready(function() {
     var $isAnimatedMe = $('.isAnimatedMe'),
     	$isAnimatedHey = $('.isAnimatedHey'),
     	$isAnimatedLeo = $('.isAnimatedLeo'),
-    	$isAnimatedGallery = $('.isAnimatedGallery');
-    	$isAnimatedGrid = $('.grid')
+    	$isAnimatedGallery = $('.isAnimatedGallery'),
+    	$isAnimatedGrid = $('.grid'),
+    	$isAnimatedContact = $('.isAnimatedContact'),
+    	$isAnimatedContactItem = $('.isAnimatedContactItem');
 
 
     $("#fullpage").fullpage({
     	navigation: true,
     	onLeave: function(index, nextIndex, direction) {
 
+    	//To create the code below, I used this tutorial: https://webdesign.tutsplus.com/tutorials/quick-tip-scroll-animations-with-fullpagejs-and-animatecss--cms-25235
 
     	if( index == 1 && nextIndex == 2 ) { 
 	        $isAnimatedMe.addClass('animated rollIn').css('animation-delay', '.5s'); // jQuery Function Number 1: (.addClass)
@@ -22,18 +25,37 @@ $( document ).ready(function() {
       	if( ( index == 1 || index == 2) && nextIndex == 3 ) {
 		    $isAnimatedGallery.addClass('animated fadeInUp').css('animation-delay', '.5s');
 		    $isAnimatedGallery.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-          		$(this).removeClass('animated fadeInUp').addClass('animated bounceOutDown').css('animation-delay', '2.5s'); // jQuery Function Number 3: (.removeClass)
+          		$(this).removeClass('animated fadeInUp').addClass('animated bounceOutUp').css('animation-delay', '2.5s'); // jQuery Function Number 3: (.removeClass)
        		 });
-		    $('.grid-container').show();
-		    $isAnimatedGrid.addClass('animated zoomIn').css('animation-delay', '3.5s');
+		}
 
-			}	
-
-    	}
-
-
-
+		else if( ( index == 1 || index == 2 || index == 3 ) && nextIndex == 4 ) {
+	        $isAnimatedContact.addClass('animated fadeInLeft').css('animation-delay', '.5s');
+	        $isAnimatedContactItem.addClass('animated zoomIn').css('animation-delay', '1s'); 
+	        $isAnimatedContactItem.eq(0).css('animation-delay', '1.3s');
+	        $isAnimatedContactItem.eq(1).css('animation-delay', '1.6s');
+	        $isAnimatedContactItem.eq(2).css('animation-delay', '1.9s');
+	    	}
+	    }	
     });
+
+    $('#instagram').click( function(){ //jQuery Function 4: (.click)
+    	location.href = "https://www.instagram.com/8a.leo/";
+    });
+
+    $('#linkedin').click( function(){ 
+    	location.href = "linkedin.com/in/leonel-ochoa";
+    });
+
+    $('#resume').click( function(){ 
+    	location.href = "./assets/OchoaLeonelCV.pdf";
+    });
+
+    /* $('.grid').slick({
+	  infinite: true,
+	  slidesToShow: 3,
+	  slidesToScroll: 3
+	}); */
 
     /* var typed = new Typed("#titles", {
    	strings: ["Researcher. ^150 Programmer. ^150 Innovator."],
@@ -41,16 +63,10 @@ $( document ).ready(function() {
     	smartBackspace: false,
         showCursor: false,
         backSpeed: -100000,
-        startDelay: 750
+        startDelay: 750 
 
     }); */
 
-    $('.grid').isotope({
-	  layoutMode: 'masonryHorizontal',
-	  itemSelector: '.grid-item',
-	  masonryHorizontal: {
-	    rowHeight: 100
-	  }
-	});
+    
     
 });
