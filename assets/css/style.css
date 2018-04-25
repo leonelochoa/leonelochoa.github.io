@@ -50,6 +50,9 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+/* --- Nav --- */
+
+
 
 /* --- Home --- */
 
@@ -122,6 +125,9 @@ table {
 
 /* --- About --- */
 
+.slide{
+}
+
 #about{
     display: flex;
     min-height: 100vh;
@@ -149,59 +155,31 @@ table {
     z-index: 1;
 
     display: grid;
-    grid-template-rows: 52vh 48vh;
+    grid-template-rows: 30vh 70vh;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
-        "left-about right-about"
-        "bottom-about bottom-about";
+        "heading heading"
+        "left-about right-about";
+
+    justify-items: center;
 }
 
-#left-about{
-    grid-area: left-about;
+#about-heading-container{
+    grid-area: heading;
+    align-self: flex-end;
 
-    display: grid;
-    grid-template-rows: auto auto;
-    grid-template-columns: 100px auto 100px;
-    grid-template-areas: 
-        "about-pre-heading about-pre-heading ."
-        ". about-heading about-heading";
-    align-items: center;
+    margin-bottom: 1%;
 
-    width: 100%;
-}
-
-#about-pre-heading{
-    grid-area: about-pre-heading;
-    align-self: center;
-}
-
-.pre-heading{
-    font-family: EB Garamond;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 24px;
-    text-align: center;
-    color: #FFFCF9;
-}
-
-#heading-frame{
-    grid-area: about-heading;
-    align-self: start;
-
-    width: 500px;
-    height: 115px;
-    background: #F29559;
+    width: 65vh;
+    height: 15vh;
 
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 30px;
-    margin-top: 20px;
 }
 
-
 .section-heading{
+
     font-family: EB Garamond;
     font-style: normal;
     font-weight: normal;
@@ -216,52 +194,93 @@ table {
     grid-area: right-about;
 
     display: flex;
-    flex-direction: column-reverse;
-}
-
-.post-heading{
-    font-family: EB Garamond;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 48px;
-    text-align: center;
-
-    color: #FFFCF9;
-}
-
-#bottom-about{
-    grid-area: bottom-about;
-
-    display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: center;
 }
 
-.section-text{
-    font-family: EB Garamond;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 32px;
-    text-align: center;
+#about-text-container{
+    margin-top: 4%;
+    margin-right: 30%;
+    margin-left: 5%;
 
-    color: #FFFCF9;
 }
 
 #about-text{
-    margin-top: 10px;
-    margin-right: 75px;
-    margin-left: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-end;
 }
 
-.bold{
-    font-size: 32px;
+#hey{
+
+    font-family: Gloria Hallelujah;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 18px;
+
+    color: #FFFCF9
 }
 
-#leonel-ochoa{
-    font-size: 48px;
+#leo{
+
+    font-family: Gloria Hallelujah;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 36px;
+
+    color: #F2D492;
+
+    margin-left: 30px;
 }
+
+#about-text p{
+    font-family: EB Garamond;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 18px;
+
+    color: #FFFCF9;
+
+    margin-left: 30px;
+}
+
+#left-about{
+    grid-area: left-about;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+
+}
+
+#left-about .image-container{
+
+    margin-left: 200px;
+    margin-top: -75px;
+
+    width: 70vh;
+    height: 45vh;
+    background: #F2D492;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+#me{
+
+    position: absolute;
+    height: inherit;
+    width: inherit;
+}
+
 
 /* --- Gallery --- */
 
