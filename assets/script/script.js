@@ -14,6 +14,7 @@ $( document ).ready(function() {
 
     $("#fullpage").fullpage({
     	navigation: true,
+    	anchors:['home', 'about'],
 
     	onLeave: function(index, nextIndex, direction) {
 
@@ -24,21 +25,6 @@ $( document ).ready(function() {
 	        $isAnimatedHey.addClass('animated fadeInRight').css('animation-delay', '2s'); // jQuery Function Number 2: (.css)
 	        $isAnimatedLeo.addClass('animated jackInTheBox').css('animation-delay', '3.5s');
       		}
-
-      	if( ( index == 1 || index == 2) && nextIndex == 3 ) {
-		    $isAnimatedGallery.addClass('animated fadeInUp').css('animation-delay', '.5s');
-		    $isAnimatedGallery.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-          		$(this).removeClass('animated fadeInUp').addClass('animated bounceOutUp').css('animation-delay', '2.5s'); // jQuery Function Number 3: (.removeClass)
-       		 });
-		}
-
-		else if( ( index == 1 || index == 2 || index == 3 ) && nextIndex == 4 ) {
-	        $isAnimatedContact.addClass('animated fadeInLeft').css('animation-delay', '.5s');
-	        $isAnimatedContactItem.addClass('animated zoomIn').css('animation-delay', '1s'); 
-	        $isAnimatedContactItem.eq(0).css('animation-delay', '1.3s');
-	        $isAnimatedContactItem.eq(1).css('animation-delay', '1.6s');
-	        $isAnimatedContactItem.eq(2).css('animation-delay', '1.9s');
-	    	}
 	    }
 
     });
