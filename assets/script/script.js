@@ -7,11 +7,14 @@ $( document ).ready(function() {
     	$isAnimatedGallery = $('.isAnimatedGallery'),
     	$isAnimatedGrid = $('.grid'),
     	$isAnimatedContact = $('.isAnimatedContact'),
-    	$isAnimatedContactItem = $('.isAnimatedContactItem');
+    	$isAnimatedContactItem = $('.isAnimatedContactItem'),
+    	$isAnimatedNavUp = $('.isAnimatedNavUp'),
+    	$isAnimatedNavDown = $('.isAnimatedNavDown');
 
 
     $("#fullpage").fullpage({
     	navigation: true,
+
     	onLeave: function(index, nextIndex, direction) {
 
     	//To create the code below, I used this tutorial: https://webdesign.tutsplus.com/tutorials/quick-tip-scroll-animations-with-fullpagejs-and-animatecss--cms-25235
@@ -36,7 +39,8 @@ $( document ).ready(function() {
 	        $isAnimatedContactItem.eq(1).css('animation-delay', '1.6s');
 	        $isAnimatedContactItem.eq(2).css('animation-delay', '1.9s');
 	    	}
-	    }	
+	    }
+
     });
 
     $('#instagram').click( function(){ //jQuery Function 4: (.click)
@@ -57,15 +61,14 @@ $( document ).ready(function() {
 	  slidesToScroll: 3
 	}); */
 
-    /* var typed = new Typed("#titles", {
-   	strings: ["Researcher. ^150 Programmer. ^150 Innovator."],
+    var typed = new Typed("#titles", {
+   	strings: ["Photographer.  ^150 Researcher.  ^150 Innovator."],
     	typeSpeed: 75,
     	smartBackspace: false,
         showCursor: false,
-        backSpeed: -100000,
         startDelay: 750 
 
-    }); */
+    });
 
     
     

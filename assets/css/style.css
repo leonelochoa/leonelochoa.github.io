@@ -85,17 +85,21 @@ table {
 
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto;
+    grid-template-rows: 50% 25% 1fr;
     grid-template-areas: 
-        "."
         "heading"
         "sub-heading"
-        ".";
+        "navigation";
+    height: 100vh;
+
 }
 
 #name{
     grid-area: heading;
     margin-bottom: 5px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .heading{  
@@ -112,6 +116,8 @@ table {
 #titles{
     grid-area: sub-heading;
     margin-top: 5px; 
+    display: flex;
+    justify-content: center;
 }
 
 .sub-heading{
@@ -121,6 +127,57 @@ table {
     line-height: normal;
     font-size: 36px;
     text-align: center;
+    color: #FFFCF9;
+}
+
+#navigation-home{
+    grid-area: navigation;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+
+}
+
+.navigation-item{
+    font-family: EB Garamond;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 32px;
+    text-align: center;
+    color: #FFFCF9;
+    margin-top: 30px;
+    margin-left: 75px;
+    margin-right: 75px;
+    opacity: .5;
+}
+
+.navigation-item:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+#fp-nav ul li a span, 
+.fp-slidesNav ul li a span {
+    background: #FFFCF9;
+    color: #FFFCF9;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+}
+      
+#fp-nav ul li a.active span, 
+.fp-slidesNav ul li a.active span, 
+#fp-nav ul li:hover a.active span, 
+.fp-slidesNav ul li:hover a.active span {
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    background: #FFFCF9;
+    box-sizing: border-box;
     color: #FFFCF9;
 }
 
@@ -273,9 +330,6 @@ table {
     justify-content: center;
     align-content: center;
 
-    -webkit-box-shadow: 0px 10px 33px 1px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 10px 33px 1px rgba(0,0,0,0.75);
-    box-shadow: 0px 10px 33px 1px rgba(0,0,0,0.75);
 }
 
 
@@ -291,143 +345,12 @@ table {
 
 
 
-/* --- Gallery --- */
-
-#gallery{
-    display: flex;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-}
-
-#particles-js-gallery{
-    flex: 1;
-    width: inherit;
-    height: 100vh;
-    z-index: 1;
-    background: #B8B08D;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#gallery-container{
-    flex: 1;
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    z-index: 1;
-
-    display: grid;
-    grid-template-rows: 30vh 70vh;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-        "heading"
-        "content";
-
-    justify-items: center;
-}
-
-#gallery-heading-container{
-
-    display: flex;
-    align-content: flex-start;
-    justify-content: center;
-
-    margin-top: 3.5%;
-}
-
-#overlay{
-    
-    grid-area: content;
-    width: 75%;
-    height: 100%;
-    
-    background: #F2D492;
-
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-
-    -webkit-box-shadow: 0px 5px 44px -10px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 5px 44px -10px rgba(0,0,0,0.75);
-    box-shadow: 0px 5px 44px -10px rgba(0,0,0,0.75);
-    /* -webkit-box-shadow: 0px 3px 10px 0px rgba(50,54,66,1);
-    -moz-box-shadow: 0px 3px 10px 0px rgba(50,54,66,1);
-    box-shadow: 0px 3px 10px 0px rgba(50,54,66,1); */
-}
-
-#gallery-text{
-    background: #F29559;
-    margin-right: 200px;
-    margin-left: 200px;
-    padding-bottom: 20px;
-    padding-top: 10px;
-
-    z-index: 10;
-
-    display: flex;
-    justify-content: center;
-    align-content: center;
-
-    -webkit-box-shadow: 0px 6px 57px -10px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 6px 57px -10px rgba(0,0,0,0.75);
-    box-shadow: 0px 6px 57px -10px rgba(0,0,0,0.75);
-}
-
-#overlay h1{
-
-    font-family: EB Garamond;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 48px;
-    text-align: center;
-
-    color: #FFFCF9;
-}
-
-.grid{
-    flex: 1;
-    background: #283845;
-
-}
-
-
-.hidden{
-    display: none;
-}
-
-
-
-/* --- Projects --- */
-
-#projects{
-    display: flex;
-    min-height: 100vh;
-    align-items: center;
-    justify-content: center;
-}
-
-#particles-js-projects{
-    flex: 1;
-    width: inherit;
-    height: 100vh;
-    z-index: 1;
-    background: #F2D492;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 /* --- Contact --- */
 
 #contact{
     display: flex;
-    max-height: 85vh;
+    max-height: 100vh;
     align-items: center;
     justify-content: center;
 }
@@ -437,7 +360,7 @@ table {
     width: inherit;
     height: 100vh;
     z-index: 1;
-    background: #F29559;
+    background: #B8B08D;
 
     display: flex;
     justify-content: center;
@@ -561,4 +484,158 @@ table {
     font-size: 96px;
     text-align: center;
     color: #FFFCF9;
+}
+
+
+/* --- Navigation --- */
+body
+{
+  margin: 0;
+  padding: 0;
+  
+  /* make it look decent enough */
+  background: #232323;
+  color: #cdcdcd;
+  font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+a:hover
+{
+  color: tomato;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: none;
 }
