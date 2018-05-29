@@ -11,6 +11,8 @@ $( document ).ready(function() {
     	$isAnimatedNavUp = $('.isAnimatedNavUp'),
     	$isAnimatedNavDown = $('.isAnimatedNavDown');
 
+    	animation_over = false;
+
 
     $("#fullpage").fullpage({
     	navigation: true,
@@ -18,6 +20,7 @@ $( document ).ready(function() {
 
     	afterLoad: function(anchorLink, index){
 
+    	if (animation_over == false){
     		function entrance(){
 				$isAnimatedNavUp.addClass('animated slideInUp').css('animation-delay', '0').css('visibility', 'visible');
 	    		$isAnimatedNavDown.addClass('animated slideInDown').css('animation-delay', '.3s').css('visibility', 'visible');
@@ -26,17 +29,20 @@ $( document ).ready(function() {
 	    		$isAnimatedNavUp.addClass('animated slideInUp').css('animation-delay', '1.2s').css('visibility', 'visible');
 
 	    		function active(){
-				$isAnimatedNavUp.removeClass('animated slideInUp').addClass('animated hvr-grow');
-	    		$isAnimatedNavDown.removeClass('animated slideInDown').addClass('animated hvr-grow');
+				$isAnimatedNavUp.removeClass('animated slideInUp').addClass('animated hvr-float-shadow');
+	    		$isAnimatedNavDown.removeClass('animated slideInDown').addClass('animated hvr-float-shadow');
 	    		$isAnimatedNavUp.eq(0);
 	    		$isAnimatedNavDown.eq(0);
 	    		$isAnimatedNavUp.eq(1);
 				}
 
 				setTimeout(active, 2000);
+				animation_over = true;
 			}
 
 			setTimeout(entrance, 6800);
+    	}
+    		
     		
     	},
 
