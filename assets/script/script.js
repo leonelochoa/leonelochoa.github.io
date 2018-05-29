@@ -14,11 +14,35 @@ $( document ).ready(function() {
 
     $("#fullpage").fullpage({
     	navigation: true,
-    	anchors:['home', 'about'],
+    	anchors:['Home', 'About'],
+
+    	afterLoad: function(anchorLink, index){
+
+    		function entrance(){
+				$isAnimatedNavUp.addClass('animated slideInUp').css('animation-delay', '0').css('visibility', 'visible');
+	    		$isAnimatedNavDown.addClass('animated slideInDown').css('animation-delay', '.3s').css('visibility', 'visible');
+	    		$isAnimatedNavUp.addClass('animated slideInUp').css('animation-delay', '.6s').css('visibility', 'visible');
+	    		$isAnimatedNavDown.addClass('animated slideInDown').css('animation-delay', '.9s').css('visibility', 'visible');
+	    		$isAnimatedNavUp.addClass('animated slideInUp').css('animation-delay', '1.2s').css('visibility', 'visible');
+
+	    		function active(){
+				$isAnimatedNavUp.removeClass('animated slideInUp').addClass('animated hvr-grow');
+	    		$isAnimatedNavDown.removeClass('animated slideInDown').addClass('animated hvr-grow');
+	    		$isAnimatedNavUp.eq(0);
+	    		$isAnimatedNavDown.eq(0);
+	    		$isAnimatedNavUp.eq(1);
+				}
+
+				setTimeout(active, 2000);
+			}
+
+			setTimeout(entrance, 6800);
+    		
+    	},
 
     	onLeave: function(index, nextIndex, direction) {
 
-    	//To create the code below, I used this tutorial: https://webdesign.tutsplus.com/tutorials/quick-tip-scroll-animations-with-fullpagejs-and-animatecss--cms-25235
+    	//From: https://webdesign.tutsplus.com/tutorials/quick-tip-scroll-animations-with-fullpagejs-and-animatecss--cms-25235
 
     	if( index == 1 && nextIndex == 2 ) { 
 	        $isAnimatedMe.addClass('animated rollIn').css('animation-delay', '.5s'); // jQuery Function Number 1: (.addClass)
@@ -48,8 +72,8 @@ $( document ).ready(function() {
 	}); */
 
     var typed = new Typed("#titles", {
-   	strings: ["Photographer.  ^150 Researcher.  ^150 Innovator."],
-    	typeSpeed: 75,
+   	strings: ["Photographer.  ^130 Researcher.  ^130 Innovator."],
+    	typeSpeed: 90,
     	smartBackspace: false,
         showCursor: false,
         startDelay: 750 

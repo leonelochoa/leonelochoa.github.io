@@ -138,7 +138,6 @@ table {
     align-items: flex-start;
     justify-content: space-evenly;
 
-
 }
 
 .navigation-item{
@@ -153,6 +152,7 @@ table {
     margin-left: 75px;
     margin-right: 75px;
     opacity: .5;
+    visibility: hidden;
 }
 
 .navigation-item:hover{
@@ -180,6 +180,7 @@ table {
     box-sizing: border-box;
     color: #FFFCF9;
 }
+
 
 /* --- About --- */
 
