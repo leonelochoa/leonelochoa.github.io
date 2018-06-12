@@ -15,6 +15,7 @@ $( document ).ready(function() {
 
     $("#fullpage").fullpage({
     	navigation: true,
+    	scrollOverflow: true,
     	anchors:['Home', 'About'],
 
     	afterLoad: function(anchorLink, index){
@@ -63,7 +64,7 @@ $( document ).ready(function() {
     });
 
     $('#linkedin').click( function(){ 
-    	location.href = "linkedin.com/in/leonel-ochoa";
+    	location.href = "https://www.linkedin.com/in/leonel-ochoa";
     });
 
     $('#resume').click( function(){ 
