@@ -1,6 +1,10 @@
 $( document ).ready(function() {
     console.log( "Ready ;)");
 
+    if (window.innerHeight > window.innerWidth){
+    alert("Alert: View in Landscape mode! - Leo");
+}
+
     var $isAnimatedMe = $('.isAnimatedMe'),
     	$isAnimatedHey = $('.isAnimatedHey'),
     	$isAnimatedLeo = $('.isAnimatedLeo'),
