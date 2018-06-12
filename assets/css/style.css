@@ -151,7 +151,7 @@ table {
     margin-top: 30px;
     margin-left: 75px;
     margin-right: 75px;
-    opacity: .5;
+    opacity: .35;
     visibility: hidden;
 }
 
@@ -293,6 +293,7 @@ table {
     align-self: flex-start;
 
     margin-left: 30px;
+    margin-top: -12.5px;
 }
 
 #about-text p{

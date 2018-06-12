@@ -8,8 +8,7 @@ $( document ).ready(function() {
     	$isAnimatedGrid = $('.grid'),
     	$isAnimatedContact = $('.isAnimatedContact'),
     	$isAnimatedContactItem = $('.isAnimatedContactItem'),
-    	$isAnimatedNavUp = $('.isAnimatedNavUp'),
-    	$isAnimatedNavDown = $('.isAnimatedNavDown');
+    	$isAnimatedNav = $('.isAnimatedNav');
 
     	animation_over = false;
 
@@ -22,25 +21,25 @@ $( document ).ready(function() {
 
     	if (animation_over == false){
     		function entrance(){
-				$isAnimatedNavUp.addClass('animated slideInUp').css('animation-delay', '0').css('visibility', 'visible');
-	    		$isAnimatedNavDown.addClass('animated slideInDown').css('animation-delay', '.3s').css('visibility', 'visible');
-	    		$isAnimatedNavUp.addClass('animated slideInUp').css('animation-delay', '.6s').css('visibility', 'visible');
-	    		$isAnimatedNavDown.addClass('animated slideInDown').css('animation-delay', '.9s').css('visibility', 'visible');
-	    		$isAnimatedNavUp.addClass('animated slideInUp').css('animation-delay', '1.2s').css('visibility', 'visible');
+				$isAnimatedNav.addClass('animated slideInUp').css('visibility', 'visible');
+	    		$isAnimatedNav.addClass('animated slideInUp').css('visibility', 'visible');
+	    		$isAnimatedNav.addClass('animated slideInUp').css('visibility', 'visible');
+	    		$isAnimatedNav.addClass('animated slideInUp').css('visibility', 'visible');
+	    		$isAnimatedNav.addClass('animated slideInUp').css('visibility', 'visible');
 
 	    		function active(){
-				$isAnimatedNavUp.removeClass('animated slideInUp').addClass('animated hvr-float-shadow');
-	    		$isAnimatedNavDown.removeClass('animated slideInDown').addClass('animated hvr-float-shadow');
-	    		$isAnimatedNavUp.eq(0);
-	    		$isAnimatedNavDown.eq(0);
-	    		$isAnimatedNavUp.eq(1);
+	    		$isAnimatedNav.removeClass('animated slideInUp').addClass('animated hvr-grow');
+	    		$isAnimatedNav.eq(0);
+	    		$isAnimatedNav.eq(1);
+	    		$isAnimatedNav.eq(2);
+	    		$isAnimatedNav.eq(3);
 				}
 
 				setTimeout(active, 2000);
 				animation_over = true;
 			}
 
-			setTimeout(entrance, 6800);
+			setTimeout(entrance, 7625);
     	}
     		
     		
@@ -82,7 +81,7 @@ $( document ).ready(function() {
     	typeSpeed: 90,
     	smartBackspace: false,
         showCursor: false,
-        startDelay: 750 
+        startDelay: 1500 
 
     });
 
