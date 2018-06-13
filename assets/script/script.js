@@ -2,8 +2,15 @@ $( document ).ready(function() {
     console.log( "Ready ;)");
 
     if (window.innerHeight > window.innerWidth){
-    alert("For the best user experience switch to landscape - Leo");
-}
+    alert("For the best user experience, switch to landscape.");
+	}
+
+	window.addEventListener("load",function() {
+    setTimeout(function(){
+        // This hides the address bar:
+        window.scrollTo(0, 1);
+    }, 0);
+});
 
     var $isAnimatedMe = $('.isAnimatedMe'),
     	$isAnimatedHey = $('.isAnimatedHey'),
