@@ -2,7 +2,7 @@ $( document ).ready(function() {
     console.log( "Ready ;)");
 
     if (window.innerHeight > window.innerWidth){
-    alert("Alert: View in Landscape mode! - Leo");
+    alert("For the best user experience switch to landscape - Leo");
 }
 
     var $isAnimatedMe = $('.isAnimatedMe'),
